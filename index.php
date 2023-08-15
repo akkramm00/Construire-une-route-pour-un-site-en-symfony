@@ -10,6 +10,31 @@
       Symfony est un framework HTTP dont le but principal est de transformer une requête en reponse .
       pour cela , plusieurs architectures sont possibles, mais on utilisera le plus le plus répandu d'entre eux : le modele MVC qui convient perafaitement pour réaliser des applicationns web classiques.
       C'est une organisation du code qui permet de correctement séparer loes responsabilités des options de codes de notre application. Les models servent à interagir avec notre base de données , les views contiennent le rendu visuel de nos pages et les controllers servent d'intermédiaire et pilotent les interactions entre toutes nos options de code. il est en  quelque sorte le chef d'orchestre de notre application.
+
+      <h3>Méthode de création d'un controlleur</h3>
+      controller est chargé de connaitre les routes disponibles sur notre application et d'exécuter du code lorsque nous nous connectons à cette route
+
+      Pour créer une première route, il nous faut céer notre premier controller . Pour cela :
+     1_  Rendez-vous dans le dossier "src/Controller" et céer un fichier "HomeController.php".
+      2_ Cller le code suivant dans ce fichier:
+
+<?php
+namespace App\Controller;
+
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
+
+class HomeController
+  {
+    #[Route('/')]
+    public function number() : Response
+    {
+    return new Response(rand(0, 100));
+    }
+  }
+?>
+
+      3_ Désormais, si nous rafraîchissons la page initiale, nous devons voir un nombre compris entre  et 100 s'afficher Félicitation , nous venons de ccéer notre premieère route     
       
     </p>
 <h1></h1>
