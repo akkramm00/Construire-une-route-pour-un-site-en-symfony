@@ -14,9 +14,9 @@
       <h3>Méthode de création d'un controlleur</h3>
       controller est chargé de connaitre les routes disponibles sur notre application et d'exécuter du code lorsque nous nous connectons à cette route
 
-      Pour créer une première route, il nous faut céer notre premier controller . Pour cela :
-     1_  Rendez-vous dans le dossier "src/Controller" et céer un fichier "HomeController.php".
-      2_ Cller le code suivant dans ce fichier:
+      Pour créer une première route, il nous faut créer notre premier controller . Pour cela :
+     1_  Rendez-vous dans le dossier "src/Controller" et créer un fichier "HomeController.php".
+      2_ Coller le code suivant dans ce fichier:
 
 <?php
 namespace App\Controller;
